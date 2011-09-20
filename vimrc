@@ -12,7 +12,7 @@ fun SetupVAM()
             call confirm("Remind yourself that most plugins ship with documentation (README*, doc/*.txt). Its your first source of knowledge. If you can't find the info you're looking for in reasonable time ask maintainers to improve documentation")
             exec '!p='.shellescape(vam_install_path).'; mkdir -p "$p" && cd "$p" && git clone --depth 1 git://github.com/MarcWeber/vim-addon-manager.git'
           endif
-          call vam#ActivateAddons(['fugitive', 'syntastic', 'command-t', 'ack', 'delimitMate', 'snipmate', 'snipmate-snipets', 'supertab', 'surround', 'taglist-plus', 'nerdcommenter', 'tlib', 'vim-addon-mw-utils', 'vim-addon-manager'], {'auto_install' : 0})
+          call vam#ActivateAddons(['fugitive', 'syntastic', 'command-t', 'ack', 'delimitMate', 'snipmate', 'snipmate-snippets', 'supertab', 'surround', 'taglist-plus', 'NERD_commenter', 'tlib', 'vim-addon-mw-utils', 'vim-addon-manager'], {'auto_install' : 0})
           " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
           " where pluginA could be github:YourName or snipmate-snippets see vam#install#RewriteName()
           " also see section "5. Installing plugins" in VAM's documentation
