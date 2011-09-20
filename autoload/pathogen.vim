@@ -1,1 +1,0 @@
-/Users/kosta/apps/vim-pathogen/autoload/pathogen.vim
