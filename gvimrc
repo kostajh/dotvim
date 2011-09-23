@@ -1,4 +1,4 @@
-color railscasts2
+color Solarized
 
 if has("gui_macvim")
   set guifont=Menlo-Regular:h15
