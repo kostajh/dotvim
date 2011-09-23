@@ -1,7 +1,7 @@
 color railscasts2
-if has("gui_macvim")
 
-  set guifont=EspressoMono-Regular:h15 
+if has("gui_macvim")
+  set guifont=Menlo-Regular:h15
   " Command-T for CommandT
   macmenu &File.New\ Tab key=<D-T>
   map <D-t> :CommandT<CR>
