@@ -1,0 +1,3 @@
+[submodule "Drupal-Snippets-for-Vim"]
+	path = Drupal-Snippets-for-Vim
+	url = https://github.com/theunraveler/Drupal-Snippets-for-Vim
