@@ -40,6 +40,9 @@ set textwidth=80
 set formatoptions=croql
 set comments=sr:/**,m:*\ ,ex:*/,://
 
+" Taglist
+let Tlist_Ctags_Cmd="/usr/local/Cellar/ctags/5.8/bin/ctags"
+
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
