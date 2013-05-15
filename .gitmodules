@@ -134,3 +134,7 @@
 	path = bundle/vim-notes
 	url = git@github.com:xolox/vim-notes.git
   ignore = dirty
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = git@github.com:mattn/webapi-vim.git
+  ignore = dirty

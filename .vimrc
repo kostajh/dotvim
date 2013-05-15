@@ -28,9 +28,11 @@ let s:php_executable='/usr/bin/php'
 hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 
 " PHP Settings
-let g:phpqa_messdetector_ruleset = "/path/to/phpmd.xml"
+let g:phpqa_codesniffer_args = "--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+let g:phpqa_messdetector_autorun = 0
+
 "" DrupalCS support
-noremap <silent> <Leader>dcs :!phpcs --standard=Drupal %
+noremap <silent> <Leader>dcs :!phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme %
 
 " Behat
 let feature_filetype='behat'
