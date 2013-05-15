@@ -172,10 +172,6 @@ nnoremap ; :
 let g:pep8_map='<leader>8'
 au FileType python set omnifunc=pythoncomplete#Complete
 
-" Rope
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
-
 " Powerline
 set rtp+=.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
