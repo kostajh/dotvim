@@ -15,6 +15,12 @@ set nowritebackup
 let g:tagbar_phpctags_bin='/usr/local/bin/phpctags'
 map <leader>y :TagbarToggle<CR>
 
+" PHP Settings
+let g:phpqa_messdetector_ruleset = "/path/to/phpmd.xml"
+
+" Behat
+let feature_filetype='behat'
+
 " Drupal plugin
 let g:Drupal_dirs = {6: '~/Sites/drupal6', 7: '~/Sites/drupal7', 8: '~/src/drupal/drupal8'}
 
