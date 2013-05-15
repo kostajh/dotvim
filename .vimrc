@@ -15,6 +15,9 @@ set nowritebackup
 let g:tagbar_phpctags_bin='/usr/local/bin/phpctags'
 map <leader>y :TagbarToggle<CR>
 
+" Drupal plugin
+let g:Drupal_dirs = {6: '~/Sites/drupal6', 7: '~/Sites/drupal7', 8: '~/src/drupal/drupal8'}
+
 " Standards
 set number
 set ruler

@@ -122,3 +122,7 @@
 	path = bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
   ignore = dirty
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git@github.com:tpope/vim-markdown.git
+  ignore = dirty
