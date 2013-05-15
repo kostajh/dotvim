@@ -62,10 +62,6 @@
 	path = bundle/vim-phpqa
 	url = git@github.com:joonty/vim-phpqa.git
   ignore = dirty
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = git@github.com:fholgado/minibufexpl.vim.git
-  ignore = dirty
 [submodule "bundle/vim-easymotion"]
   ignore = dirty
   path = bundle/vim-easymotion

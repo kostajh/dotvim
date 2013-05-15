@@ -10,6 +10,8 @@ filetype plugin indent on
 " Shortcut syntax enable
 map <leader>se :syntax enable<CR>
 
+" CtrlP
+nnoremap <leader>b :CtrlPBuffer<CR>
 " No vim backups
 set nobackup
 set nowritebackup
@@ -17,7 +19,7 @@ set noswapfile
 
 " Tagbar
 let g:tagbar_phpctags_bin='/usr/local/bin/phpctags'
-let g:tagbar_ctags_bin='/usr/local/bin/ctagss'
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 let g:tagbar_width=40
 map <leader>y :TagbarToggle<CR>
 
@@ -129,13 +131,6 @@ set autochdir
 
 " Window splits
 nnoremap <leader>w <C-w>v<C-w>l
-
-" Buffer explorer
-let g:miniBufExplForceSyntaxEnable = 0
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1 
 
 " Bind Ctrl+movement keys to navigate splits
 map <c-j> <c-w>j
