@@ -1,5 +1,5 @@
 source ~/.vimrc
-if has("gui_running")
+if has("gui_macvim")
    hi LineNr guifg=#3D3D3D guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
   set cursorline
   set transparency=0
