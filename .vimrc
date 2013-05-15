@@ -6,3 +6,9 @@ call pathogen#infect('/Users/kosta/.vim/bundle/{}')
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+" Theme. Enable Solarized.
+syntax enable
+set background=dark
+colorscheme solarized
+call togglebg#map("<F5>")
