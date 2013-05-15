@@ -18,4 +18,10 @@ if has("gui_macvim")
   set guioptions-=r
   set guifont=Source\ Code\ Pro\ for\ Powerline:h15
   set noballooneval
+   " Command-][ to increase/decrease indentation
+  vmap <D-]> >gv
+  vmap <D-[> <gv
+
+  " Don't beep
+  set visualbell
 endif
