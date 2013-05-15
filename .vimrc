@@ -10,13 +10,24 @@ filetype plugin indent on
 " No vim backups
 set nobackup
 set nowritebackup
+set noswapfile
 
 " Tagbar
 let g:tagbar_phpctags_bin='/usr/local/bin/phpctags'
+let g:tagbar_ctags_bin='/usr/local/bin/ctagss'
+let g:tagbar_width=40
 map <leader>y :TagbarToggle<CR>
+
+" Set PHP executable
+let s:php_executable='/usr/bin/php'
+
+" Highlight editing line
+hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 
 " PHP Settings
 let g:phpqa_messdetector_ruleset = "/path/to/phpmd.xml"
+"" DrupalCS support
+noremap <silent> <Leader>dcs :!phpcs --standard=Drupal %
 
 " Behat
 let feature_filetype='behat'
@@ -45,7 +56,12 @@ let mapleader=","
 
 " Theme. Enable Solarized.
 syntax enable
+" Whitespace intentional on this line!
+set fillchars+=vert:\ 
+let g:vimroom_guibackground = '#002b36'
+let g:vimroom_ctermbackground = 8
 set background=dark
+set t_Co=256
 colorscheme solarized
 call togglebg#map("<F5>")
 
@@ -75,7 +91,40 @@ let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', 'CVS', '\~$']
 let NERDTreeHijackNetrw=1
-nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <leader>nd :NERDTreeToggle<cr>
+
+" Remember last location in file
+if has("automcd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+" Syntastic
+if has('statusline')
+    set statusline+=%*
+    set laststatus=2
+    " Broken down into easily includeable segments
+    set statusline=%<%f\ " Filename
+    set statusline+=%w%h%m%r " Options
+    set statusline+=%{fugitive#statusline()}
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=\ [%{&ff}/%Y] " filetype
+    set statusline+=\ [%{getcwd()}] " current dir
+    set statusline+=%#warningmsg#
+    let g:syntastic_enable_signs=1
+    let g:syntastic_auto_jump=1
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+endif
+
+" PHPCS and Syntastic
+let g:syntastic_phpcs_conf="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+let g:syntastic_phpcs_disable=0
+
+" Marked
+nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
+" Hide tildes
+hi NonText guifg=bg
 
 " Strip whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -142,3 +191,7 @@ map <leader>r :RopeRename<CR>
 set rtp+=.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
+
+" Vim notes
+let g:notes_suffix = '.md'
+let g:notes_directory = '~/Dropbox/Notes'
