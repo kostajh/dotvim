@@ -130,3 +130,7 @@
 	path = bundle/vim-behat
 	url = git://github.com/veloce/vim-behat.git
   ignore = dirty
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = git@github.com:xolox/vim-notes.git
+  ignore = dirty
