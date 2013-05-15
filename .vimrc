@@ -47,9 +47,7 @@ set autoindent
 set expandtab
 
 " Gutters
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 set numberwidth=3
-"highlight clear SignColumn
 
 " Map leader to ","
 let mapleader=","
@@ -177,4 +175,4 @@ let g:Powerline_symbols = 'fancy'
 
 " Vim notes
 let g:notes_suffix = '.md'
-let g:notes_directory = '~/Dropbox/Notes'
+let g:notes_directories = ['~/Dropbox/Notes']
