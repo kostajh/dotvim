@@ -150,3 +150,7 @@
 	path = bundle/xmledit
 	url = https://github.com/sukima/xmledit.git
   ignore = dirty
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+  ignore = dirty
