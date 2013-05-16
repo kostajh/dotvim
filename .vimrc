@@ -40,6 +40,7 @@ hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm
 " PHP Settings
 let g:phpqa_codesniffer_args = "--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 let g:phpqa_messdetector_autorun = 0
+let g:phpqa_codecoverage_autorun = 0
 
 "" DrupalCS support
 noremap <silent> <Leader>dcs :!phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme %
@@ -120,8 +121,8 @@ if has("automcd")
 endif
 
 " PHPCS and Syntastic
-let g:syntastic_phpcs_conf="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
-let g:syntastic_phpcs_disable=0
+let g:syntastic_php_phpcs_args="--report=csv --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+let g:syntastic_php_phpcs_disable=0
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 highlight SyntasticErrorSign guifg=white guibg=red
 highlight SyntasticErrorLine guibg=#2f0000
@@ -185,8 +186,19 @@ au FileType python set omnifunc=pythoncomplete#Complete
 " Powerline
 set rtp+=.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 let g:Powerline_symbols = 'fancy'
 
 " Vim notes
 let g:notes_suffix = '.md'
 let g:notes_directories = ['~/Dropbox/Notes']
+
+" Powerline - see https://powerline.readthedocs.org/en/latest/tipstricks.html#vim
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
