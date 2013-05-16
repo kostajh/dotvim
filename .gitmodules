@@ -146,3 +146,7 @@
 	path = bundle/csv.vim
 	url = git@github.com:chrisbra/csv.vim.git
   ignore = dirty
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = https://github.com/sukima/xmledit.git
+  ignore = dirty

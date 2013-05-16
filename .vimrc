@@ -124,7 +124,8 @@ let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', 'CVS', '\~$']
 let NERDTreeHijackNetrw=1
-nnoremap <leader>nd :NERDTreeToggle<cr>
+let NERDTreeChDirMode=2
+nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark 
 
 " Remember last location in file
