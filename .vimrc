@@ -10,6 +10,11 @@ filetype plugin indent on
 " Always edit in utf-8:
 set encoding=utf-8
 
+" Enforce consistent line endings: if 'ff' is set to "unix" and there are any
+" stray '\r' characters at ends of lines, then automatically remove them. See
+" $VIMRUNTIME/indent/php.vim .
+let PHP_removeCRwhenUnix = 1
+
 " Shortcut syntax enable
 map <leader>se :syntax enable<CR>
 
@@ -47,10 +52,17 @@ let g:Drupal_dirs = {6: '~/Sites/drupal6', 7: '~/Sites/drupal7', 8: '~/src/drupa
 
 " Standards
 set number
+set wildmode=longest,list
+set fileformats=unix
+set history=300
 set ruler
+set showmode
 set showmatch
 set nowrap
 set hlsearch
+set backspace=2
+set linebreak
+set formatoptions=1
 set tabstop=2
 set shiftwidth=2
 set autoindent
