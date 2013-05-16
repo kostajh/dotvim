@@ -1,6 +1,6 @@
 source ~/.vimrc
 if has("gui_macvim")
-   hi LineNr guifg=#646464 guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
+  hi LineNr guifg=#646464 guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
   set cursorline
   set transparency=0
    " Command-Shift-F for Ack
