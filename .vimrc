@@ -7,6 +7,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Vimroom
+nnoremap <silent> <Leader>mz <Plug>VimroomToggle
+
 " Always edit in utf-8:
 set encoding=utf-8
 
