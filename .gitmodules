@@ -134,3 +134,6 @@
 	path = bundle/webapi-vim
 	url = git@github.com:mattn/webapi-vim.git
   ignore = dirty
+[submodule "bundle/unite.vim"]
+	path = bundle/unite.vim
+	url = git@github.com:Shougo/unite.vim.git
