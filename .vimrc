@@ -20,6 +20,7 @@ map <leader>se :syntax enable<CR>
 
 " CtrlP
 nnoremap <leader>b :CtrlPBuffer<CR>
+
 " No vim backups
 set nobackup
 set nowritebackup
@@ -113,6 +114,7 @@ let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', 'CVS', '\~$']
 let NERDTreeHijackNetrw=1
 nnoremap <leader>nd :NERDTreeToggle<cr>
+nnoremap <leader>nb :NERDTreeFromBookmark 
 
 " Remember last location in file
 if has("automcd")
@@ -124,6 +126,7 @@ endif
 let g:syntastic_php_phpcs_args="--report=csv --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 let g:syntastic_php_phpcs_disable=0
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_drupal_checkers=['phpcs']
 highlight SyntasticErrorSign guifg=white guibg=red
 highlight SyntasticErrorLine guibg=#2f0000
 
