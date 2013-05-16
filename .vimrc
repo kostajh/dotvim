@@ -1,11 +1,51 @@
-" Following lines added by drush vimrc-install on Wed, 15 May 2013 01:01:05 +0000.
-set nocompatible
-call pathogen#infect('/Users/kosta/.drush/vimrc/bundle/{}')
-call pathogen#infect('/Users/kosta/.vim/bundle/{}')
-" End of vimrc-install additions.
-execute pathogen#infect()
-syntax on
+set nocompatible               " be iMproved
+filetype off 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle Bundles
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-sensible'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/syntastic'
+Bundle 'garbas/vim-snipmate'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'honza/vim-snippets'
+Bundle 'tomtom/tlib_vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-surround'
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp'
+Bundle 'pangloss/vim-javascript'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-git'
+Bundle 'sjl/gundo.vim'
+Bundle 'fs111/pydoc.vim'
+Bundle 'vim-scripts/pep8'
+Bundle 'alfredodeza/pytest.vim'
+Bundle 'vim-scripts/TaskList'
+Bundle 'sontek/rope-vim'
+Bundle 'Lokaltog/powerline'
+Bundle 'rstacruz/sparkup'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'veloce/vim-behat'
+Bundle 'xolox/vim-notes'
+Bundle 'mattn/webapi-vim'
+Bundle 'Shougo/unite.vim'
+Bundle 'mikewest/vimroom'
+Bundle 'chrisbra/csv.vim'
+Bundle 'sukima/xmledit'
+Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
+
 filetype plugin indent on
+syntax on
 
 " Vimroom
 nnoremap <silent> <Leader>mz <Plug>VimroomToggle
