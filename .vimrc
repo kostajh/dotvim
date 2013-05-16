@@ -10,6 +10,14 @@ filetype plugin indent on
 " Vimroom
 nnoremap <silent> <Leader>mz <Plug>VimroomToggle
 
+" CSV
+let g:csv_autocmd_arrange = 1
+aug CSV_Editing
+  au!
+  au BufRead,BufWritePost *.csv :%ArrangeColumn
+  au BufWritePre *.csv :%UnArrangeColumn
+aug end
+
 " Always edit in utf-8:
 set encoding=utf-8
 

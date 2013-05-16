@@ -137,6 +137,12 @@
 [submodule "bundle/unite.vim"]
 	path = bundle/unite.vim
 	url = git@github.com:Shougo/unite.vim.git
+  ignore = dirty
 [submodule "bundle/vimroom"]
 	path = bundle/vimroom
 	url = git@github.com:mikewest/vimroom.git
+  ignore = dirty
+[submodule "bundle/csv.vim"]
+	path = bundle/csv.vim
+	url = git@github.com:chrisbra/csv.vim.git
+  ignore = dirty
