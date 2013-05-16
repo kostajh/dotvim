@@ -7,6 +7,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Always edit in utf-8:
+set encoding=utf-8
+
 " Shortcut syntax enable
 map <leader>se :syntax enable<CR>
 
