@@ -18,6 +18,9 @@ aug CSV_Editing
   au BufWritePre *.csv :%UnArrangeColumn
 aug end
 
+" XML formatting
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+
 " Always edit in utf-8:
 set encoding=utf-8
 
