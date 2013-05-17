@@ -5,6 +5,8 @@ call vundle#rc()
 
 " Vundle Bundles
 Bundle 'gmarik/vundle'
+Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'xolox/vim-easytags'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-sensible'
 Bundle 'majutsushi/tagbar'
@@ -27,8 +29,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'fs111/pydoc.vim'
 Bundle 'vim-scripts/pep8'
 Bundle 'alfredodeza/pytest.vim'
-Bundle 'vim-scripts/TaskList'
-Bundle 'sontek/rope-vim'
+Bundle 'vim-scripts/TaskList.vim'
 Bundle 'Lokaltog/powerline'
 Bundle 'rstacruz/sparkup'
 Bundle 'airblade/vim-gitgutter'
@@ -42,6 +43,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'mikewest/vimroom'
 Bundle 'chrisbra/csv.vim'
 Bundle 'sukima/xmledit'
+Bundle 'scratch'
 Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 
 filetype plugin indent on
