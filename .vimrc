@@ -5,6 +5,9 @@ call vundle#rc()
 
 " Vundle Bundles
 Bundle 'gmarik/vundle'
+Bundle 'StanAngeloff/php.vim'
+Bundle 'suan/vim-instant-markdown'
+Bundle 'othree/html5.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'xolox/vim-easytags'
 Bundle 'tpope/vim-fugitive'
@@ -23,7 +26,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-git'
 Bundle 'sjl/gundo.vim'
 Bundle 'fs111/pydoc.vim'
@@ -43,7 +46,10 @@ Bundle 'Shougo/unite.vim'
 Bundle 'mikewest/vimroom'
 Bundle 'chrisbra/csv.vim'
 Bundle 'sukima/xmledit'
+Bundle 'FuzzyFinder'
+Bundle 'L9'
 Bundle 'scratch'
+Bundle 'terryma/vim-multiple-cursors'
 Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
 
 filetype plugin indent on
@@ -76,6 +82,7 @@ map <leader>se :syntax enable<CR>
 
 " CtrlP
 nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>. :CtrlPTag<cr>
 
 " No vim backups
 set nobackup
@@ -172,6 +179,7 @@ let NERDTreeHijackNetrw=1
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark 
+nnoremap <leader>nc :NERDTreeCWD<cr>
 
 " Remember last location in file
 if has("automcd")
