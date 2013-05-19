@@ -5,6 +5,7 @@ call vundle#rc()
 
 " Vundle Bundles
 Bundle 'gmarik/vundle'
+Bundle 'Raimondi/delimitMate'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'othree/html5.vim'
@@ -46,8 +47,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'mikewest/vimroom'
 Bundle 'chrisbra/csv.vim'
 Bundle 'sukima/xmledit'
-Bundle 'FuzzyFinder'
-Bundle 'L9'
+Bundle 'wincent/Command-T'
 Bundle 'scratch'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
