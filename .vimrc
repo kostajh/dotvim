@@ -10,7 +10,6 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'tpope/vim-liquid'
 Bundle 'Raimondi/delimitMate'
 Bundle 'StanAngeloff/php.vim'
-Bundle 'suan/vim-instant-markdown'
 Bundle 'othree/html5.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'xolox/vim-easytags'
@@ -31,7 +30,7 @@ Bundle 'kien/ctrlp'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-git'
 Bundle 'sjl/gundo.vim'
 Bundle 'fs111/pydoc.vim'
@@ -58,8 +57,11 @@ Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-
 filetype plugin indent on
 syntax on
 
-" DelimitMate
+" Quick edit vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYGVIMRC<cr>
 
+" DelimitMate
 let g:delimitMate_expand_cr = 1
 
 " Vimroom
