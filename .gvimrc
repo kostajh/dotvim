@@ -1,15 +1,19 @@
 source ~/.vimrc
 if has("gui_macvim")
-  hi LineNr guifg=#646464 guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
+  hi LineNr guifg=#646464 guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=black cterm=NONE
   set cursorline
   set transparency=0
+  " Vertical Split
+  map <D-V> <C-w>v<C-w>l
+  " Horizontal Split
+  map <D-H> <C-w>s<C-w>l
   " Apple-R for buffer tag list
   macmenu File.Print key=<nop>
   map <D-r> :CtrlPBufTag<CR>
-  " Apple-P for Fuzzy File
-  map <D-p> :FufCoverageFile<CR>
+  " Apple-P for Command-T
+  map <D-p> :CommandT<CR>
   " Command-Shift-F for Ack
-  map <D-F> :Ack<space>
+  map <D-F> :Ag<space>
   " Command K+B to hide NERDTree
   map <D-k> :NERDTreeToggle<cr>
   " Command shift p for NERDTreeFromBookmark
@@ -26,7 +30,7 @@ if has("gui_macvim")
   " Don't show right or left scrollbar
   set guioptions-=r
   set guioptions-=L
-  set guifont=Source\ Code\ Pro\ for\ Powerline:h15
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h14
   set noballooneval
    " Command-][ to increase/decrease indentation
   vmap <D-]> >gv

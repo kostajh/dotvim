@@ -5,6 +5,9 @@ call vundle#rc()
 
 " Vundle Bundles
 Bundle 'gmarik/vundle'
+Bundle 'skammer/vim-css-color'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'tpope/vim-liquid'
 Bundle 'Raimondi/delimitMate'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'suan/vim-instant-markdown'
@@ -23,11 +26,12 @@ Bundle 'honza/vim-snippets'
 Bundle 'tomtom/tlib_vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-surround'
-Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'ervandew/supertab'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-git'
 Bundle 'sjl/gundo.vim'
 Bundle 'fs111/pydoc.vim'
@@ -43,7 +47,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'veloce/vim-behat'
 Bundle 'xolox/vim-notes'
 Bundle 'mattn/webapi-vim'
-Bundle 'Shougo/unite.vim'
 Bundle 'mikewest/vimroom'
 Bundle 'chrisbra/csv.vim'
 Bundle 'sukima/xmledit'
@@ -54,6 +57,10 @@ Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-
 
 filetype plugin indent on
 syntax on
+
+" DelimitMate
+
+let g:delimitMate_expand_cr = 1
 
 " Vimroom
 nnoremap <silent> <Leader>mz <Plug>VimroomToggle
@@ -69,6 +76,10 @@ aug end
 " XML formatting
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
+" RST
+command! RstPreview :!rst2html.py % > /tmp/rstprev.html && open /tmp/rstprev.html
+nnoremap <C-p><C-r> :RstPreview<CR>
+
 " Always edit in utf-8:
 set encoding=utf-8
 
@@ -79,6 +90,9 @@ let PHP_removeCRwhenUnix = 1
 
 " Shortcut syntax enable
 map <leader>se :syntax enable<CR>
+
+" Easytags
+let g:easytags_python_enabled = 1
 
 " CtrlP
 nnoremap <leader>b :CtrlPBuffer<CR>
@@ -99,7 +113,7 @@ map <leader>y :TagbarToggle<CR>
 let s:php_executable='/usr/bin/php'
 
 " Highlight editing line
-hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
+hi LineNr guifg=#3D3D3D guibg=black gui=NONE ctermfg=darkgray ctermbg=black cterm=NONE
 
 " PHP Settings
 let g:phpqa_codesniffer_args = "--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
@@ -162,8 +176,6 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
 " Task list binding
 map <leader>td <Plug>TaskList
@@ -204,14 +216,11 @@ hi NonText guifg=bg
 " Strip whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Ack
-nnoremap <leader>a :Ack
-
 " Reselect pasted text
 nnoremap <leader>v V`]
 
 " Automatically change window's cwd to file's dir
-set autochdir
+"set autochdir
 
 " Window splits
 nnoremap <leader>w <C-w>v<C-w>l
@@ -230,18 +239,6 @@ set wrap
 set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=85
-
-" Training wheels
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
 
 " Misc shortcuts
 nnoremap ; :
