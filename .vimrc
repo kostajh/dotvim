@@ -75,6 +75,9 @@ aug CSV_Editing
   au BufWritePre *.csv :%UnArrangeColumn
 aug end
 
+" No undo files
+set noundofile
+
 " XML formatting
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
