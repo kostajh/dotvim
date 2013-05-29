@@ -14,7 +14,7 @@ if has("gui_macvim")
   map <D-p> :CommandT<CR>
   " Command-Shift-F for Ack
   map <D-F> :Ag<space>
-  " Command K+B to hide NERDTree
+  " Command K to hide NERDTree
   map <D-k> :NERDTreeToggle<cr>
   " Command shift p for NERDTreeFromBookmark
   map <D-P> :NERDTreeFromBookmark<space>

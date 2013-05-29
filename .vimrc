@@ -26,7 +26,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-surround'
 Bundle 'rking/ag.vim'
-Bundle 'kien/ctrlp'
+Bundle 'kien/ctrlp.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab'
@@ -34,7 +34,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-git'
 Bundle 'sjl/gundo.vim'
 Bundle 'fs111/pydoc.vim'
-Bundle 'vim-scripts/pep8'
+Bundle 'vim-flake8'
 Bundle 'alfredodeza/pytest.vim'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'Lokaltog/powerline'
@@ -44,6 +44,7 @@ Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'veloce/vim-behat'
+Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'xolox/vim-notes'
 Bundle 'mattn/webapi-vim'
 Bundle 'mikewest/vimroom'
@@ -99,9 +100,8 @@ map <leader>se :syntax enable<CR>
 " Easytags
 let g:easytags_python_enabled = 1
 
-" CtrlP
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>. :CtrlPTag<cr>
+" BuffergatorToggle
+nnoremap <leader>b :BuffergatorToggle<CR>
 
 " No vim backups
 set nobackup
@@ -153,7 +153,10 @@ set autoindent
 set expandtab
 
 " Gutters
-set numberwidth=3
+set numberwidth=4
+
+" Git gutter
+let g:gitgutter_eager = 0
 
 " Map leader to ","
 let mapleader=","
@@ -166,6 +169,7 @@ let g:vimroom_guibackground = '#002b36'
 let g:vimroom_ctermbackground = 8
 set background=dark
 set t_Co=256
+let g:solarized_termcolors=16
 colorscheme solarized
 call togglebg#map("<F5>")
 
@@ -249,8 +253,6 @@ set colorcolumn=85
 nnoremap ; :
 
 " Python specific
-" pep8 binds to 8
-let g:pep8_map='<leader>8'
 au FileType python set omnifunc=pythoncomplete#Complete
 
 " Powerline
