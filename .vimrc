@@ -5,6 +5,7 @@ call vundle#rc()
 
 " Vundle Bundles
 Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'skammer/vim-css-color'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'tpope/vim-liquid'
@@ -30,7 +31,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-git'
 Bundle 'sjl/gundo.vim'
 Bundle 'fs111/pydoc.vim'
@@ -152,6 +153,9 @@ set shiftwidth=2
 set autoindent
 set expandtab
 
+" Indents
+set smartindent
+
 " Gutters
 set numberwidth=4
 
@@ -254,6 +258,7 @@ nnoremap ; :
 
 " Python specific
 au FileType python set omnifunc=pythoncomplete#Complete
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " Powerline
 set rtp+=.vim/bundle/powerline/powerline/bindings/vim

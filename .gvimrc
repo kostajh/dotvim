@@ -3,6 +3,7 @@ if has("gui_macvim")
   hi LineNr guifg=#646464 guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=black cterm=NONE
   set cursorline
   set transparency=0
+  " Buffer nav
   " Vertical Split
   map <D-V> <C-w>v<C-w>l
   " Horizontal Split
