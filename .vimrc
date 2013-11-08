@@ -73,6 +73,7 @@ syntax on
 
 " Eclim
 nnoremap <silent> <buffer> <cr> :PhpSearchContext<cr>
+let g:EclimCompletionMethod = 'omnifunc'
 
 " Quick edit vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
