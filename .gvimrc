@@ -1,6 +1,13 @@
 source ~/.vimrc
-if has("gui_macvim")
+set visualbell
+
+if has("gui_running")
   hi LineNr guifg=#646464 guibg=#002b36 gui=NONE ctermfg=darkgray ctermbg=black cterm=NONE
+  set lines=999 columns=999
+  map <D-r> :CtrlPBufTag<CR>
+endif
+
+if has("gui_macvim")
   set cursorline
   set transparency=0
   " Buffer nav
@@ -10,7 +17,6 @@ if has("gui_macvim")
   map <D-H> <C-w>s<C-w>l
   " Apple-R for buffer tag list
   macmenu File.Print key=<nop>
-  map <D-r> :CtrlPBufTag<CR>
   " Apple-P for Command-T
   map <D-p> :CommandT<CR>
   " Command-Shift-F for Ack
