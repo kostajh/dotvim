@@ -1,4 +1,4 @@
-set nocompatible               " be iMproved
+set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -71,7 +71,6 @@ Bundle 'joonty/vdebug'
 filetype plugin indent on
 syntax on
 
-" Eclim
 nnoremap <silent> <buffer> <cr> :PhpSearchContext<cr>
 
 " Quick edit vimrc
